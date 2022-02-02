@@ -19,7 +19,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 SECRET_KEY = '=#k_k1e^&l_-d8+6g8n^g((p1@sg$9=-hsb-&l-$r(miroiy2@'
 DEBUG = True
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['susys-crm-one.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -75,8 +75,18 @@ WSGI_APPLICATION = 'sucrm.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dbd7sirlhpdaj3',
+        'USER': 'yqjjsclhhsxptm',
+        'PASSWORD': '3e13ba0aaab3b41125788ad609ee93f1852e0e74b375a3088ee94ebb6996c0f4',
+        'HOST': 'ec2-54-235-98-1.compute-1.amazonaws.com',
+        'PORT': '5432',
+
+
+
     }
 }
 
